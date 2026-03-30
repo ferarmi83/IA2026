@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CLEstado.cs" />
     <Compile Include="FRMOchoPuzzle.cs">
       <SubType>Form</SubType>
     </Compile>
