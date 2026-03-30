@@ -63,6 +63,7 @@
             this.LBL01.TabIndex = 1;
             this.LBL01.Text = "2";
             this.LBL01.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL01.Click += new System.EventHandler(this.LBL01_Click);
             // 
             // LBL02
             // 
@@ -75,6 +76,7 @@
             this.LBL02.TabIndex = 2;
             this.LBL02.Text = "3";
             this.LBL02.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL02.Click += new System.EventHandler(this.LBL02_Click);
             // 
             // LBL12
             // 
@@ -87,6 +89,7 @@
             this.LBL12.TabIndex = 5;
             this.LBL12.Text = "6";
             this.LBL12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL12.Click += new System.EventHandler(this.LBL12_Click);
             // 
             // LBL11
             // 
@@ -99,6 +102,7 @@
             this.LBL11.TabIndex = 4;
             this.LBL11.Text = "5";
             this.LBL11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL11.Click += new System.EventHandler(this.LBL11_Click);
             // 
             // LBL10
             // 
@@ -124,6 +128,7 @@
             this.LBL22.TabIndex = 8;
             this.LBL22.Text = "4";
             this.LBL22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL22.Click += new System.EventHandler(this.LBL22_Click);
             // 
             // LBL21
             // 
@@ -136,6 +141,7 @@
             this.LBL21.TabIndex = 7;
             this.LBL21.Text = "8";
             this.LBL21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL21.Click += new System.EventHandler(this.LBL21_Click);
             // 
             // LBL20
             // 
@@ -148,6 +154,7 @@
             this.LBL20.TabIndex = 6;
             this.LBL20.Text = "7";
             this.LBL20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.LBL20.Click += new System.EventHandler(this.LBL20_Click);
             // 
             // FRMOchoPuzzle
             // 

@@ -49,5 +49,128 @@ namespace IA2026
                 LBL10.Text = "0";
             }
         }
+
+        private void LBL20_Click(object sender, EventArgs e)
+        {
+            if (LBL10.Text == "0")
+            {
+                LBL10.Text = LBL20.Text;
+                LBL20.Text = "0";
+            }
+            else if (LBL21.Text == "0")
+            {
+                LBL21.Text = LBL20.Text;
+                LBL20.Text = "0";
+            }
+        }
+
+        private void LBL01_Click(object sender, EventArgs e)
+        {
+            if (LBL00.Text == "0")
+            {
+                LBL00.Text = LBL01.Text;
+                LBL01.Text = "0";
+            }
+            else if (LBL11.Text == "0")
+            {
+                LBL11.Text = LBL01.Text;
+                LBL01.Text = "0";
+            }
+            else if (LBL02.Text == "0")
+            {
+                LBL02.Text = LBL01.Text;
+                LBL01.Text = "0";
+            }
+        }
+
+        private void LBL11_Click(object sender, EventArgs e)
+        {
+            if (LBL01.Text == "0")
+            {
+                LBL01.Text = LBL11.Text;
+                LBL11.Text = "0";
+            }
+            else if (LBL10.Text == "0")
+            {
+                LBL10.Text = LBL11.Text;
+                LBL11.Text = "0";
+            }
+            else if (LBL21.Text == "0")
+            {
+                LBL21.Text = LBL11.Text;
+                LBL11.Text = "0";
+            }
+            else if (LBL12.Text == "0")
+            {
+                LBL12.Text = LBL11.Text;
+                LBL11.Text = "0";
+            }
+        }
+
+        private void LBL21_Click(object sender, EventArgs e)
+        {
+            if (LBL11.Text == "0")
+            {
+                LBL11.Text = LBL21.Text;
+                LBL21.Text = "0";
+            }
+            else if (LBL20.Text == "0")
+            {
+                LBL20.Text = LBL21.Text;
+                LBL21.Text = "0";
+            }
+            else if (LBL22.Text == "0")
+            {
+                LBL22.Text = LBL21.Text;
+                LBL21.Text = "0";
+            }
+        }
+
+        private void LBL02_Click(object sender, EventArgs e)
+        {
+            if (LBL01.Text == "0")
+            {
+                LBL01.Text = LBL02.Text;
+                LBL02.Text = "0";
+            }
+            else if (LBL12.Text == "0")
+            {
+                LBL12.Text = LBL02.Text;
+                LBL02.Text = "0";
+            }
+        }
+
+        private void LBL12_Click(object sender, EventArgs e)
+        {
+            if (LBL11.Text == "0")
+            {
+                LBL11.Text = LBL12.Text;
+                LBL12.Text = "0";
+            }
+            else if (LBL22.Text == "0")
+            {
+                LBL22.Text = LBL12.Text;
+                LBL12.Text = "0";
+            }
+            else if (LBL02.Text == "0")
+            {
+                LBL02.Text = LBL12.Text;
+                LBL12.Text = "0";
+            }
+        }
+
+        private void LBL22_Click(object sender, EventArgs e)
+        {
+            if (LBL21.Text == "0")
+            {
+                LBL21.Text = LBL22.Text;
+                LBL22.Text = "0";
+            }
+            else if (LBL12.Text == "0")
+            {
+                LBL12.Text = LBL22.Text;
+                LBL22.Text = "0";
+            }
+        }
     }
 }
