@@ -10,14 +10,22 @@ namespace IA2026
     {
         #region Campos
             private int[,] _tablero;
+            private int _nivel;
         #endregion
+
         #region Propiedades
         public int[,] tablero 
         { 
             get => _tablero; 
             set => _tablero = value; 
         }
+        public int nivel 
+        { 
+            get => _nivel; 
+            set => _nivel = value; 
+        }
         #endregion
+
         #region Constructor
         public CLEstado()
         {
@@ -25,6 +33,7 @@ namespace IA2026
             for (int i = 0; i < 3; i++)
                 for (int j = 0; j < 3; j++)
                 this._tablero[i, j] = 0;
+            this._nivel = 0;
         }
         public CLEstado(int p00, int p01, int p02,
                         int p10, int p11, int p12,
@@ -41,9 +50,11 @@ namespace IA2026
             this._tablero[0, 2] = p02;
             this._tablero[1, 2] = p12;
             this._tablero[2, 2] = p22;
+            this._nivel = 0;
         }
 
         #endregion
+
         #region Métodos
         #endregion
     }

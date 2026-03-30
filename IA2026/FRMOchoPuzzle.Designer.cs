@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.LBL00 = new System.Windows.Forms.Label();
             this.LBL01 = new System.Windows.Forms.Label();
             this.LBL02 = new System.Windows.Forms.Label();
@@ -37,6 +38,9 @@
             this.LBL22 = new System.Windows.Forms.Label();
             this.LBL21 = new System.Windows.Forms.Label();
             this.LBL20 = new System.Windows.Forms.Label();
+            this.BTNDesordenar = new System.Windows.Forms.Button();
+            this.TMRReloj = new System.Windows.Forms.Timer(this.components);
+            this.LBLContador = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LBL00
@@ -156,11 +160,39 @@
             this.LBL20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL20.Click += new System.EventHandler(this.LBL20_Click);
             // 
+            // BTNDesordenar
+            // 
+            this.BTNDesordenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNDesordenar.Location = new System.Drawing.Point(420, 12);
+            this.BTNDesordenar.Name = "BTNDesordenar";
+            this.BTNDesordenar.Size = new System.Drawing.Size(190, 51);
+            this.BTNDesordenar.TabIndex = 9;
+            this.BTNDesordenar.Text = "Desordenar";
+            this.BTNDesordenar.UseVisualStyleBackColor = true;
+            this.BTNDesordenar.Click += new System.EventHandler(this.BTNDesordenar_Click);
+            // 
+            // TMRReloj
+            // 
+            this.TMRReloj.Tick += new System.EventHandler(this.TMRReloj_Tick);
+            // 
+            // LBLContador
+            // 
+            this.LBLContador.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.LBLContador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LBLContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLContador.Location = new System.Drawing.Point(451, 79);
+            this.LBLContador.Name = "LBLContador";
+            this.LBLContador.Size = new System.Drawing.Size(130, 130);
+            this.LBLContador.TabIndex = 10;
+            this.LBLContador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FRMOchoPuzzle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(424, 428);
+            this.ClientSize = new System.Drawing.Size(622, 428);
+            this.Controls.Add(this.LBLContador);
+            this.Controls.Add(this.BTNDesordenar);
             this.Controls.Add(this.LBL22);
             this.Controls.Add(this.LBL21);
             this.Controls.Add(this.LBL20);
@@ -189,6 +221,9 @@
         private System.Windows.Forms.Label LBL22;
         private System.Windows.Forms.Label LBL21;
         private System.Windows.Forms.Label LBL20;
+        private System.Windows.Forms.Button BTNDesordenar;
+        private System.Windows.Forms.Timer TMRReloj;
+        private System.Windows.Forms.Label LBLContador;
     }
 }
 

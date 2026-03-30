@@ -12,6 +12,7 @@ namespace IA2026
 {
     public partial class FRMOchoPuzzle : Form
     {
+        private int contador = 0;
         public FRMOchoPuzzle()
         {
             InitializeComponent();
@@ -170,6 +171,27 @@ namespace IA2026
             {
                 LBL12.Text = LBL22.Text;
                 LBL22.Text = "0";
+            }
+        }
+
+        private void BTNDesordenar_Click(object sender, EventArgs e)
+        {
+            TMRReloj.Enabled = true;
+        }
+
+        private void TMRReloj_Tick(object sender, EventArgs e)
+        {
+            if (contador < 10)
+            {
+                contador++;
+                LBLContador.Text= contador.ToString();
+            }
+            else 
+            { 
+                TMRReloj.Enabled=false;
+                MessageBox.Show("Reloj apagado");
+                LBLContador.Text = "";
+                contador = 0;
             }
         }
     }
