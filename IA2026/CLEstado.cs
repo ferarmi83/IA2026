@@ -53,9 +53,15 @@ namespace IA2026
             this._nivel = 0;
         }
 
+
+
         #endregion
 
         #region Métodos
+        public List<CLEstado> GenerarHijos()
+        {
+            throw new NotImplementedException();
+        }
         #endregion
     }
 }
