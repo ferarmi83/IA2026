@@ -60,7 +60,41 @@ namespace IA2026
         #region Métodos
         public List<CLEstado> GenerarHijos()
         {
-            throw new NotImplementedException();
+            List<CLEstado> Respuesta= new List<CLEstado>();
+            String pos0 = "";
+            int[,] aux = new int[3, 3];
+            for (int i = 0; i < 3; i++)            
+                for (int j = 0; j < 3; j++)                
+                    if (this._tablero[i, j] == 0)
+                    {
+                        pos0 = i.ToString() + j.ToString();
+                    }                        
+            switch (pos0)
+            {
+                case "00":
+                    CLEstado A = new CLEstado(this._tablero[0, 1],
+                                              this._tablero[0, 0],
+                                              this._tablero[0, 2],
+                                              this._tablero[1, 0],
+                                              this._tablero[1, 1],
+                                              this._tablero[1, 2],
+                                              this._tablero[2, 0],
+                                              this._tablero[2, 1],
+                                              this._tablero[2, 2]);
+                    Respuesta.Add(A);
+                    A = new CLEstado(this._tablero[1, 0],
+                                     this._tablero[0, 1],
+                                     this._tablero[0, 2],
+                                     this._tablero[0, 0],
+                                     this._tablero[1, 1],
+                                     this._tablero[1, 2],
+                                     this._tablero[2, 0],
+                                     this._tablero[2, 1],
+                                     this._tablero[2, 2]);
+                    Respuesta.Add(A);
+                    break;
+            }
+            return Respuesta;
         }
         #endregion
     }
