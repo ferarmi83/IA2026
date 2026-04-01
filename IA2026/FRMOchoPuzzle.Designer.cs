@@ -179,10 +179,10 @@
             // 
             this.LBLContador.BackColor = System.Drawing.Color.LightSkyBlue;
             this.LBLContador.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LBLContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLContador.Location = new System.Drawing.Point(451, 79);
+            this.LBLContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLContador.Location = new System.Drawing.Point(420, 66);
             this.LBLContador.Name = "LBLContador";
-            this.LBLContador.Size = new System.Drawing.Size(130, 130);
+            this.LBLContador.Size = new System.Drawing.Size(190, 100);
             this.LBLContador.TabIndex = 10;
             this.LBLContador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -190,7 +190,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 428);
+            this.ClientSize = new System.Drawing.Size(616, 428);
             this.Controls.Add(this.LBLContador);
             this.Controls.Add(this.BTNDesordenar);
             this.Controls.Add(this.LBL22);
