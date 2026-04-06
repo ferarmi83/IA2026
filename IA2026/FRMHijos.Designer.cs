@@ -199,6 +199,7 @@
             this.Controls.Add(this.LBL00);
             this.Name = "FRMHijos";
             this.Text = "FRMHijos";
+            this.Load += new System.EventHandler(this.FRMHijos_Load);
             this.ResumeLayout(false);
 
         }
