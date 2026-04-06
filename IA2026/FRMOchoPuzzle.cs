@@ -425,6 +425,9 @@ namespace IA2026
                                             Convert.ToInt32(LBL22.Text)
                                             );
             List<CLEstado> Hijos = Inicial.GenerarHijos();
+            FRMHijos A = new FRMHijos();
+            A.Hijos = Hijos;
+            A.ShowDialog();
         }
     }
 }
