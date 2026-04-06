@@ -159,6 +159,7 @@
             this.BTNIzquierda.TabIndex = 18;
             this.BTNIzquierda.Text = "<";
             this.BTNIzquierda.UseVisualStyleBackColor = true;
+            this.BTNIzquierda.Click += new System.EventHandler(this.BTNIzquierda_Click);
             // 
             // BTNDerecha
             // 
@@ -169,6 +170,7 @@
             this.BTNDerecha.TabIndex = 19;
             this.BTNDerecha.Text = ">";
             this.BTNDerecha.UseVisualStyleBackColor = true;
+            this.BTNDerecha.Click += new System.EventHandler(this.BTNDerecha_Click);
             // 
             // LBLHijo
             // 

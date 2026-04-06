@@ -53,7 +53,26 @@ namespace IA2026
             LBL20.Text = Hijos[apuntador].tablero[2, 0].ToString();
             LBL21.Text = Hijos[apuntador].tablero[2, 1].ToString();
             LBL22.Text = Hijos[apuntador].tablero[2, 2].ToString();
+            LBLHijo.Text = "Hijo " + (apuntador + 1).ToString();
         }
         #endregion
+
+        private void BTNDerecha_Click(object sender, EventArgs e)
+        {
+            if ((Hijos.Count-1) > apuntador)
+            {
+                apuntador++;
+                TrasladarEstadoATablero(apuntador);
+            }
+        }
+
+        private void BTNIzquierda_Click(object sender, EventArgs e)
+        {
+            if (apuntador>0)
+            {
+                apuntador--;
+                TrasladarEstadoATablero(apuntador);
+            }
+        }
     }
 }
