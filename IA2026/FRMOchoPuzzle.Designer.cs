@@ -42,6 +42,7 @@
             this.TMRReloj = new System.Windows.Forms.Timer(this.components);
             this.LBLContador = new System.Windows.Forms.Label();
             this.BTNGenerarHijos = new System.Windows.Forms.Button();
+            this.BTNEsFinal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // LBL00
@@ -198,11 +199,23 @@
             this.BTNGenerarHijos.UseVisualStyleBackColor = true;
             this.BTNGenerarHijos.Click += new System.EventHandler(this.BTNGenerarHijos_Click);
             // 
+            // BTNEsFinal
+            // 
+            this.BTNEsFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNEsFinal.Location = new System.Drawing.Point(420, 205);
+            this.BTNEsFinal.Name = "BTNEsFinal";
+            this.BTNEsFinal.Size = new System.Drawing.Size(190, 51);
+            this.BTNEsFinal.TabIndex = 12;
+            this.BTNEsFinal.Text = "Es Final";
+            this.BTNEsFinal.UseVisualStyleBackColor = true;
+            this.BTNEsFinal.Click += new System.EventHandler(this.BTNEsFinal_Click);
+            // 
             // FRMOchoPuzzle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(616, 428);
+            this.Controls.Add(this.BTNEsFinal);
             this.Controls.Add(this.BTNGenerarHijos);
             this.Controls.Add(this.LBLContador);
             this.Controls.Add(this.BTNDesordenar);
@@ -238,6 +251,7 @@
         private System.Windows.Forms.Timer TMRReloj;
         private System.Windows.Forms.Label LBLContador;
         private System.Windows.Forms.Button BTNGenerarHijos;
+        private System.Windows.Forms.Button BTNEsFinal;
     }
 }
 
