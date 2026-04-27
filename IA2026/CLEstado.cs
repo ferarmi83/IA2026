@@ -351,6 +351,21 @@ namespace IA2026
             return res;
         }
 
+        public bool EsIgual(CLEstado a)
+        {            
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if (a.tablero[i, j] != this.tablero[i, j])
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
         #endregion
     }
 }

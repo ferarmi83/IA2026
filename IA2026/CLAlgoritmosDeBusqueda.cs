@@ -37,16 +37,32 @@ namespace IA2026
         {
             List<CLEstado> HijosDepurado = new List<CLEstado>();
             bool encontrado=false;
-            foreach (CLEstado a in hijos)
+            foreach (CLEstado hijo in hijos)
             {
                 encontrado = false;
-                //Comparar con abiertos
-                
-                //COmparo con cerrados
+                // comparar con abiertos
+                foreach (var a in abiertos)
+                {
+                    if (hijo.EsIgual(a))
+                    {
+                        encontrado = true; break;
+                    }
+                }
+
+                if (encontrado) continue;
+
+                // comparar con cerrados
+                foreach (var c in cerrados)
+                {
+                    if (hijo.EsIgual(c))
+                    {
+                        encontrado = true; break;
+                    }
+                }
 
                 if (!encontrado)
                 {
-                    HijosDepurado.Add(a);
+                    HijosDepurado.Add(hijo);
                 }
             }
 
