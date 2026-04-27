@@ -168,7 +168,7 @@
             this.BTNDesordenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNDesordenar.Location = new System.Drawing.Point(420, 12);
             this.BTNDesordenar.Name = "BTNDesordenar";
-            this.BTNDesordenar.Size = new System.Drawing.Size(190, 51);
+            this.BTNDesordenar.Size = new System.Drawing.Size(291, 51);
             this.BTNDesordenar.TabIndex = 9;
             this.BTNDesordenar.Text = "Desordenar";
             this.BTNDesordenar.UseVisualStyleBackColor = true;
@@ -185,7 +185,7 @@
             this.LBLContador.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLContador.Location = new System.Drawing.Point(420, 66);
             this.LBLContador.Name = "LBLContador";
-            this.LBLContador.Size = new System.Drawing.Size(190, 73);
+            this.LBLContador.Size = new System.Drawing.Size(291, 73);
             this.LBLContador.TabIndex = 10;
             this.LBLContador.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -194,7 +194,7 @@
             this.BTNGenerarHijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNGenerarHijos.Location = new System.Drawing.Point(420, 148);
             this.BTNGenerarHijos.Name = "BTNGenerarHijos";
-            this.BTNGenerarHijos.Size = new System.Drawing.Size(190, 51);
+            this.BTNGenerarHijos.Size = new System.Drawing.Size(291, 51);
             this.BTNGenerarHijos.TabIndex = 11;
             this.BTNGenerarHijos.Text = "Generar Hijos";
             this.BTNGenerarHijos.UseVisualStyleBackColor = true;
@@ -205,7 +205,7 @@
             this.BTNEsFinal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNEsFinal.Location = new System.Drawing.Point(420, 205);
             this.BTNEsFinal.Name = "BTNEsFinal";
-            this.BTNEsFinal.Size = new System.Drawing.Size(190, 51);
+            this.BTNEsFinal.Size = new System.Drawing.Size(291, 51);
             this.BTNEsFinal.TabIndex = 12;
             this.BTNEsFinal.Text = "Es Final";
             this.BTNEsFinal.UseVisualStyleBackColor = true;
@@ -216,7 +216,7 @@
             this.BTNAnchuraPrioritaria.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNAnchuraPrioritaria.Location = new System.Drawing.Point(420, 262);
             this.BTNAnchuraPrioritaria.Name = "BTNAnchuraPrioritaria";
-            this.BTNAnchuraPrioritaria.Size = new System.Drawing.Size(190, 51);
+            this.BTNAnchuraPrioritaria.Size = new System.Drawing.Size(291, 51);
             this.BTNAnchuraPrioritaria.TabIndex = 13;
             this.BTNAnchuraPrioritaria.Text = "Anchura Prioritaria";
             this.BTNAnchuraPrioritaria.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 428);
+            this.ClientSize = new System.Drawing.Size(723, 428);
             this.Controls.Add(this.BTNAnchuraPrioritaria);
             this.Controls.Add(this.BTNEsFinal);
             this.Controls.Add(this.BTNGenerarHijos);
