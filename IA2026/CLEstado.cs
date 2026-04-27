@@ -11,6 +11,7 @@ namespace IA2026
         #region Campos
             private int[,] _tablero;
             private int _nivel;
+            private CLEstado _padre;
         #endregion
 
         #region Propiedades
@@ -24,6 +25,11 @@ namespace IA2026
             get => _nivel; 
             set => _nivel = value; 
         }
+        public CLEstado padre 
+        { 
+            get => _padre; 
+            set => _padre = value; 
+        }
         #endregion
 
         #region Constructor
@@ -34,6 +40,7 @@ namespace IA2026
                 for (int j = 0; j < 3; j++)
                 this._tablero[i, j] = 0;
             this._nivel = 0;
+            this._padre = null;
         }
         public CLEstado(int p00, int p01, int p02,
                         int p10, int p11, int p12,
@@ -51,6 +58,7 @@ namespace IA2026
             this._tablero[1, 2] = p12;
             this._tablero[2, 2] = p22;
             this._nivel = 0;
+            this._padre = null;
         }
 
 
@@ -82,6 +90,7 @@ namespace IA2026
                                              this._tablero[2, 0],
                                              this._tablero[2, 1],
                                              this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     A = new CLEstado(this._tablero[1, 0],
                                      this._tablero[0, 1],
@@ -92,6 +101,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
                 case "01":
@@ -104,6 +114,7 @@ namespace IA2026
                                          this._tablero[2, 0],
                                          this._tablero[2, 1],
                                          this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -115,6 +126,7 @@ namespace IA2026
                                          this._tablero[2, 0],
                                          this._tablero[2, 1],
                                          this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -126,6 +138,7 @@ namespace IA2026
                                          this._tablero[2, 0],
                                          this._tablero[2, 1],
                                          this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
                 case "02":
@@ -138,6 +151,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     A = new CLEstado(this._tablero[0, 0],
                                      this._tablero[0, 1],
@@ -148,6 +162,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
                 case "10":
@@ -160,6 +175,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -171,6 +187,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -182,6 +199,7 @@ namespace IA2026
                                      this._tablero[1, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
                 case "11":
@@ -194,6 +212,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -205,6 +224,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -216,6 +236,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     A = new CLEstado(this._tablero[0, 0],
                                      this._tablero[0, 1],
@@ -226,6 +247,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[1, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
                 case "12":
@@ -238,6 +260,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -249,6 +272,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -260,6 +284,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[1, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
                 case "20":
@@ -272,6 +297,7 @@ namespace IA2026
                                      this._tablero[1, 0],
                                      this._tablero[2, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     A = new CLEstado(this._tablero[0, 0],
                                      this._tablero[0, 1],
@@ -282,6 +308,7 @@ namespace IA2026
                                      this._tablero[2, 1],
                                      this._tablero[2, 0],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
                 case "21":
@@ -294,6 +321,7 @@ namespace IA2026
                                      this._tablero[2, 1],
                                      this._tablero[2, 0],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -305,6 +333,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[1, 1],
                                      this._tablero[2, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
 
                     A = new CLEstado(this._tablero[0, 0],
@@ -316,6 +345,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 2],
                                      this._tablero[2, 1]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
                 case "22":
@@ -328,6 +358,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 1],
                                      this._tablero[1, 2]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     A = new CLEstado(this._tablero[0, 0],
                                      this._tablero[0, 1],
@@ -338,6 +369,7 @@ namespace IA2026
                                      this._tablero[2, 0],
                                      this._tablero[2, 2],
                                      this._tablero[2, 1]);
+                    A.padre = this;
                     Respuesta.Add(A);
                     break;
             }

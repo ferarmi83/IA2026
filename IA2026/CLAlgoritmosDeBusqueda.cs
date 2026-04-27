@@ -29,8 +29,16 @@ namespace IA2026
                     Abiertos.Add(a);
                 Actual = Abiertos[0];
             }
-
-            return Solucion;
+            if (Actual.EsFinal())
+            {
+                Solucion.Add(Actual);
+                while (Actual.padre != null)
+                { 
+                    Solucion.Add(Actual.padre);
+                    Actual=Actual.padre;
+                }                
+            }            
+            return Solucion;                            
         }
 
         private static List<CLEstado> TratarRepetidos(List<CLEstado> hijos, List<CLEstado> abiertos, List<CLEstado> cerrados)
