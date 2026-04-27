@@ -451,5 +451,24 @@ namespace IA2026
                 MessageBox.Show("NO ES el estado FINAL");
             }
         }
+
+        private void BTNAnchuraPrioritaria_Click(object sender, EventArgs e)
+        {
+            CLEstado Inicial = new CLEstado(Convert.ToInt32(LBL00.Text),
+                                            Convert.ToInt32(LBL01.Text),
+                                            Convert.ToInt32(LBL02.Text),
+                                            Convert.ToInt32(LBL10.Text),
+                                            Convert.ToInt32(LBL11.Text),
+                                            Convert.ToInt32(LBL12.Text),
+                                            Convert.ToInt32(LBL20.Text),
+                                            Convert.ToInt32(LBL21.Text),
+                                            Convert.ToInt32(LBL22.Text)
+                                            );
+            List<CLEstado>Resultado=CLAlgoritmosDeBusqueda.AnchuraPrioritaria(Inicial);
+            if (Resultado.Count > 0)
+            { MessageBox.Show("Solucion Encontrada"); }
+            else
+            { MessageBox.Show("Solucion No Encontrada"); }
+        }
     }
 }
