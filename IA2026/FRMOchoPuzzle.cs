@@ -15,6 +15,9 @@ namespace IA2026
         private int contador = 0;
         private String pos0;
         private String[,] posiciones;
+        private int contadorAnchura = 0;
+        private List<CLEstado> Resultado= new List<CLEstado>();
+        bool bandera = false;
         public FRMOchoPuzzle()
         {
             InitializeComponent();
@@ -464,14 +467,65 @@ namespace IA2026
                                             Convert.ToInt32(LBL21.Text),
                                             Convert.ToInt32(LBL22.Text)
                                             );
-            List<CLEstado>Resultado=CLAlgoritmosDeBusqueda.AnchuraPrioritaria(Inicial);
+            Resultado = new List<CLEstado>();
+            Resultado=CLAlgoritmosDeBusqueda.AnchuraPrioritaria(Inicial);
             if (Resultado.Count > 0)
             { 
-                MessageBox.Show("Solucion Encontrada"); 
-                //Resolver graficamente
+                MessageBox.Show("Solucion Encontrada en el nivel "+(Resultado.Count-1).ToString());
+                //Resolver graficamente                
+                TMRRelojAnchuraPrioritaria.Enabled = true;
             }
             else
             { MessageBox.Show("Solucion No Encontrada"); }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TMRRelojAnchuraPrioritaria_Tick(object sender, EventArgs e)
+        {
+            
+            if ((contadorAnchura < Resultado.Count)&&(!bandera))
+            {
+                EstadoATablero(Resultado[Resultado.Count-contadorAnchura-1]);
+                contadorAnchura++;
+            }
+            if ((contadorAnchura == Resultado.Count) && (!bandera))
+            {
+                bandera = true;
+                contadorAnchura--;
+                TMRRelojAnchuraPrioritaria.Enabled = false;
+                if (MessageBox.Show("Listo") == DialogResult.OK)
+                {
+                    TMRRelojAnchuraPrioritaria.Enabled = true;
+                }
+                
+            }
+            if ((contadorAnchura >= 0) && (bandera))
+            {
+                EstadoATablero(Resultado[Resultado.Count - contadorAnchura - 1]);
+                contadorAnchura--;
+            }
+            if ((contadorAnchura ==-1) && (bandera))
+            {
+                TMRRelojAnchuraPrioritaria.Enabled=false;
+                MessageBox.Show("Otra vez desordenado");
+            }
+        }
+
+        private void EstadoATablero(CLEstado Estado)
+        { 
+            LBL00.Text = Estado.tablero[0, 0].ToString();
+            LBL01.Text = Estado.tablero[0, 1].ToString();
+            LBL02.Text = Estado.tablero[0, 2].ToString();
+            LBL10.Text = Estado.tablero[1, 0].ToString();
+            LBL11.Text = Estado.tablero[1, 1].ToString();
+            LBL12.Text = Estado.tablero[1, 2].ToString();
+            LBL20.Text = Estado.tablero[2, 0].ToString();
+            LBL21.Text = Estado.tablero[2, 1].ToString();
+            LBL22.Text = Estado.tablero[2, 2].ToString();
         }
     }
 }
