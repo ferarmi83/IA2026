@@ -466,7 +466,10 @@ namespace IA2026
                                             );
             List<CLEstado>Resultado=CLAlgoritmosDeBusqueda.AnchuraPrioritaria(Inicial);
             if (Resultado.Count > 0)
-            { MessageBox.Show("Solucion Encontrada"); }
+            { 
+                MessageBox.Show("Solucion Encontrada"); 
+                //Resolver graficamente
+            }
             else
             { MessageBox.Show("Solucion No Encontrada"); }
         }
