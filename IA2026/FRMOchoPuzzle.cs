@@ -527,5 +527,29 @@ namespace IA2026
             LBL21.Text = Estado.tablero[2, 1].ToString();
             LBL22.Text = Estado.tablero[2, 2].ToString();
         }
+
+        private void BTNProfundidadLimitada_Click(object sender, EventArgs e)
+        {
+            CLEstado Inicial = new CLEstado(Convert.ToInt32(LBL00.Text),
+                                            Convert.ToInt32(LBL01.Text),
+                                            Convert.ToInt32(LBL02.Text),
+                                            Convert.ToInt32(LBL10.Text),
+                                            Convert.ToInt32(LBL11.Text),
+                                            Convert.ToInt32(LBL12.Text),
+                                            Convert.ToInt32(LBL20.Text),
+                                            Convert.ToInt32(LBL21.Text),
+                                            Convert.ToInt32(LBL22.Text)
+                                            );
+            Resultado = new List<CLEstado>();
+            Resultado = CLAlgoritmosDeBusqueda.ProfundidadLimitada(Inicial,Convert.ToInt32(NUDLimite.Value));
+            if (Resultado.Count > 0)
+            {
+                MessageBox.Show("Solucion Encontrada en el nivel " + (Resultado.Count - 1).ToString());
+                //Resolver graficamente                
+                TMRRelojAnchuraPrioritaria.Enabled = true;
+            }
+            else
+            { MessageBox.Show("Solucion No Encontrada"); }
+        }
     }
 }

@@ -45,6 +45,9 @@
             this.BTNEsFinal = new System.Windows.Forms.Button();
             this.BTNAnchuraPrioritaria = new System.Windows.Forms.Button();
             this.TMRRelojAnchuraPrioritaria = new System.Windows.Forms.Timer(this.components);
+            this.NUDLimite = new System.Windows.Forms.NumericUpDown();
+            this.BTNProfundidadLimitada = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDLimite)).BeginInit();
             this.SuspendLayout();
             // 
             // LBL00
@@ -228,11 +231,37 @@
             this.TMRRelojAnchuraPrioritaria.Interval = 500;
             this.TMRRelojAnchuraPrioritaria.Tick += new System.EventHandler(this.TMRRelojAnchuraPrioritaria_Tick);
             // 
+            // NUDLimite
+            // 
+            this.NUDLimite.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NUDLimite.Location = new System.Drawing.Point(644, 330);
+            this.NUDLimite.Name = "NUDLimite";
+            this.NUDLimite.Size = new System.Drawing.Size(67, 30);
+            this.NUDLimite.TabIndex = 14;
+            this.NUDLimite.Value = new decimal(new int[] {
+            15,
+            0,
+            0,
+            0});
+            // 
+            // BTNProfundidadLimitada
+            // 
+            this.BTNProfundidadLimitada.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNProfundidadLimitada.Location = new System.Drawing.Point(420, 319);
+            this.BTNProfundidadLimitada.Name = "BTNProfundidadLimitada";
+            this.BTNProfundidadLimitada.Size = new System.Drawing.Size(218, 51);
+            this.BTNProfundidadLimitada.TabIndex = 15;
+            this.BTNProfundidadLimitada.Text = "Profundidad Limitada";
+            this.BTNProfundidadLimitada.UseVisualStyleBackColor = true;
+            this.BTNProfundidadLimitada.Click += new System.EventHandler(this.BTNProfundidadLimitada_Click);
+            // 
             // FRMOchoPuzzle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(723, 428);
+            this.Controls.Add(this.BTNProfundidadLimitada);
+            this.Controls.Add(this.NUDLimite);
             this.Controls.Add(this.BTNAnchuraPrioritaria);
             this.Controls.Add(this.BTNEsFinal);
             this.Controls.Add(this.BTNGenerarHijos);
@@ -251,6 +280,7 @@
             this.Name = "FRMOchoPuzzle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "8 Puzzle";
+            ((System.ComponentModel.ISupportInitialize)(this.NUDLimite)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,6 +303,8 @@
         private System.Windows.Forms.Button BTNEsFinal;
         private System.Windows.Forms.Button BTNAnchuraPrioritaria;
         private System.Windows.Forms.Timer TMRRelojAnchuraPrioritaria;
+        private System.Windows.Forms.NumericUpDown NUDLimite;
+        private System.Windows.Forms.Button BTNProfundidadLimitada;
     }
 }
 
