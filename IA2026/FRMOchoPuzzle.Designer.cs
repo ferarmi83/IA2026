@@ -47,6 +47,9 @@
             this.TMRRelojAnchuraPrioritaria = new System.Windows.Forms.Timer(this.components);
             this.NUDLimite = new System.Windows.Forms.NumericUpDown();
             this.BTNProfundidadLimitada = new System.Windows.Forms.Button();
+            this.BTNH1 = new System.Windows.Forms.Button();
+            this.BTNH2 = new System.Windows.Forms.Button();
+            this.BTNH3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NUDLimite)).BeginInit();
             this.SuspendLayout();
             // 
@@ -98,7 +101,7 @@
             this.LBL12.Name = "LBL12";
             this.LBL12.Size = new System.Drawing.Size(130, 130);
             this.LBL12.TabIndex = 5;
-            this.LBL12.Text = "6";
+            this.LBL12.Text = "4";
             this.LBL12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL12.Click += new System.EventHandler(this.LBL12_Click);
             // 
@@ -111,7 +114,7 @@
             this.LBL11.Name = "LBL11";
             this.LBL11.Size = new System.Drawing.Size(130, 130);
             this.LBL11.TabIndex = 4;
-            this.LBL11.Text = "5";
+            this.LBL11.Text = "0";
             this.LBL11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL11.Click += new System.EventHandler(this.LBL11_Click);
             // 
@@ -124,7 +127,7 @@
             this.LBL10.Name = "LBL10";
             this.LBL10.Size = new System.Drawing.Size(130, 130);
             this.LBL10.TabIndex = 3;
-            this.LBL10.Text = "0";
+            this.LBL10.Text = "8";
             this.LBL10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL10.Click += new System.EventHandler(this.LBL10_Click);
             // 
@@ -137,7 +140,7 @@
             this.LBL22.Name = "LBL22";
             this.LBL22.Size = new System.Drawing.Size(130, 130);
             this.LBL22.TabIndex = 8;
-            this.LBL22.Text = "4";
+            this.LBL22.Text = "5";
             this.LBL22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL22.Click += new System.EventHandler(this.LBL22_Click);
             // 
@@ -150,7 +153,7 @@
             this.LBL21.Name = "LBL21";
             this.LBL21.Size = new System.Drawing.Size(130, 130);
             this.LBL21.TabIndex = 7;
-            this.LBL21.Text = "8";
+            this.LBL21.Text = "6";
             this.LBL21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.LBL21.Click += new System.EventHandler(this.LBL21_Click);
             // 
@@ -255,11 +258,47 @@
             this.BTNProfundidadLimitada.UseVisualStyleBackColor = true;
             this.BTNProfundidadLimitada.Click += new System.EventHandler(this.BTNProfundidadLimitada_Click);
             // 
+            // BTNH1
+            // 
+            this.BTNH1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNH1.Location = new System.Drawing.Point(717, 148);
+            this.BTNH1.Name = "BTNH1";
+            this.BTNH1.Size = new System.Drawing.Size(108, 51);
+            this.BTNH1.TabIndex = 16;
+            this.BTNH1.Text = "H1";
+            this.BTNH1.UseVisualStyleBackColor = true;
+            this.BTNH1.Click += new System.EventHandler(this.BTNH1_Click);
+            // 
+            // BTNH2
+            // 
+            this.BTNH2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNH2.Location = new System.Drawing.Point(717, 205);
+            this.BTNH2.Name = "BTNH2";
+            this.BTNH2.Size = new System.Drawing.Size(108, 51);
+            this.BTNH2.TabIndex = 17;
+            this.BTNH2.Text = "H2";
+            this.BTNH2.UseVisualStyleBackColor = true;
+            this.BTNH2.Click += new System.EventHandler(this.BTNH2_Click);
+            // 
+            // BTNH3
+            // 
+            this.BTNH3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BTNH3.Location = new System.Drawing.Point(717, 262);
+            this.BTNH3.Name = "BTNH3";
+            this.BTNH3.Size = new System.Drawing.Size(108, 51);
+            this.BTNH3.TabIndex = 18;
+            this.BTNH3.Text = "H3";
+            this.BTNH3.UseVisualStyleBackColor = true;
+            this.BTNH3.Click += new System.EventHandler(this.BTNH3_Click);
+            // 
             // FRMOchoPuzzle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(723, 428);
+            this.ClientSize = new System.Drawing.Size(891, 428);
+            this.Controls.Add(this.BTNH3);
+            this.Controls.Add(this.BTNH2);
+            this.Controls.Add(this.BTNH1);
             this.Controls.Add(this.BTNProfundidadLimitada);
             this.Controls.Add(this.NUDLimite);
             this.Controls.Add(this.BTNAnchuraPrioritaria);
@@ -305,6 +344,9 @@
         private System.Windows.Forms.Timer TMRRelojAnchuraPrioritaria;
         private System.Windows.Forms.NumericUpDown NUDLimite;
         private System.Windows.Forms.Button BTNProfundidadLimitada;
+        private System.Windows.Forms.Button BTNH1;
+        private System.Windows.Forms.Button BTNH2;
+        private System.Windows.Forms.Button BTNH3;
     }
 }
 

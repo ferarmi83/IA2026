@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace IA2026
 {
@@ -432,6 +433,105 @@ namespace IA2026
                 }
             }
             return true;
+        }
+
+        public int H1()
+        {
+            int piezasFueraDeLugar = 0;
+
+            int[,] estadoMeta =
+            {
+            {1, 2, 3},
+            {8, 0, 4},
+            {7, 6, 5}
+            };
+
+            for (int fila = 0; fila < 3; fila++)
+            {
+                for (int columna = 0; columna < 3; columna++)
+                {
+                    if (_tablero[fila, columna] != 0 &&
+                        _tablero[fila, columna] != estadoMeta[fila, columna])
+                    {
+                        piezasFueraDeLugar++;
+                    }
+                }
+            }
+            return piezasFueraDeLugar;
+        }
+
+
+
+        public int H2()
+        {
+            int distanciaTotal = 0;
+            int[,] estadoMeta =
+            {
+
+        {1, 2, 3},
+        {8, 0, 4},
+        {7, 6, 5}
+    };
+            for (int fila = 0; fila < 3; fila++)
+            {
+                for (int columna = 0; columna < 3; columna++)
+                {
+                    int valor = _tablero[fila, columna];
+                    if (valor == 0)
+                        continue;
+                    int filaMeta = 0;
+                    int columnaMeta = 0;
+                    for (int i = 0; i < 3; i++)
+                    {
+                        for (int j = 0; j < 3; j++)
+                        {
+                            if (estadoMeta[i, j] == valor)
+                            {
+                                filaMeta = i;
+                                columnaMeta = j;
+                            }
+                        }
+                    }
+                    distanciaTotal +=
+                        Math.Abs(fila - filaMeta) +
+                        Math.Abs(columna - columnaMeta);
+                }
+            }
+            return distanciaTotal;
+        }
+
+        public int H3()
+
+        {
+
+            int sumaS = 0;
+            int[] borde =
+            {
+        _tablero[0,0],
+        _tablero[0,1],
+        _tablero[0,2],
+        _tablero[1,2],
+        _tablero[2,2],
+        _tablero[2,1],
+        _tablero[2,0],
+        _tablero[1,0]
+    };
+            for (int i = 0; i < 8; i++)
+            {
+                int actual = borde[i];
+                if (actual == 0)
+                    continue;
+                int siguiente = borde[(i + 1) % 8];
+                int sucesorCorrecto = (actual == 8) ? 1 : actual + 1;
+
+                if (siguiente == sucesorCorrecto)
+                    sumaS += 0;
+                else
+                    sumaS += 2;
+            }
+            if (_tablero[1, 1] != 0)
+                sumaS += 1;
+            return H2() + sumaS;
         }
 
         #endregion

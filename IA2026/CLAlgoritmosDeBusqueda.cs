@@ -40,7 +40,6 @@ namespace IA2026
             }            
             return Solucion;                            
         }
-
         public static List<CLEstado> ProfundidadLimitada(CLEstado Inicial, int Limite)
         {
             //Definición de variables
@@ -111,7 +110,6 @@ namespace IA2026
 
             return HijosDepurado;
         }
-
         private static List<CLEstado> TratarRepetidosProfundidad(List<CLEstado> hijos, List<CLEstado> abiertos, List<CLEstado> cerrados)
         {
             List<CLEstado> HijosDepurado = new List<CLEstado>();
