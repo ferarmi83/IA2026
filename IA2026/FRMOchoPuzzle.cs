@@ -594,7 +594,7 @@ namespace IA2026
                                             Convert.ToInt32(LBL21.Text),
                                             Convert.ToInt32(LBL22.Text)
                                             );
-            MessageBox.Show(Inicial.H3().ToString());
+            MessageBox.Show(Inicial.h3.ToString());
         }
     }
 }

@@ -507,7 +507,7 @@ namespace IA2026
             return distanciaTotal;
         }
 
-        public int H3()
+        private int H3()
         {
 
             int sumaS = 0;
