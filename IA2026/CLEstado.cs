@@ -13,6 +13,7 @@ namespace IA2026
             private int[,] _tablero;
             private int _nivel;
             private CLEstado _padre;
+            private int _h3;
         #endregion
 
         #region Propiedades
@@ -25,6 +26,11 @@ namespace IA2026
         { 
             get => _nivel; 
             set => _nivel = value; 
+        }
+        public int h3
+        {
+            get => _h3;
+            set => _h3 = value;
         }
         public CLEstado padre 
         { 
@@ -60,6 +66,7 @@ namespace IA2026
             this._tablero[2, 2] = p22;
             this._nivel = 0;
             this._padre = null;
+            this._h3 = H3();
         }
 
 
@@ -501,7 +508,6 @@ namespace IA2026
         }
 
         public int H3()
-
         {
 
             int sumaS = 0;
